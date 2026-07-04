@@ -9,7 +9,6 @@ def _clip(text: str) -> str:
     """限制日志长度，避免超大 payload 影响数据库与可读性。"""
     return text[:MAX_LOG_TEXT] if text else ""
 
-
 def write_api_log(
     *,
     log_type: str,

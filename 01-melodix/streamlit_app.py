@@ -20,7 +20,13 @@ st.set_page_config(
 
 # 导入自定义模块
 from app.downloader import download_audio
-from app.database import init_db, get_connection, fetchall_dict, fetchone_dict
+
+# 使用简化版数据库模块（仅 SQLite）
+try:
+    from app.database_lite import init_db, get_connection, fetchall_dict, fetchone_dict
+except ImportError:
+    # 本地开发时回退到完整版
+    from app.database import init_db, get_connection, fetchall_dict, fetchone_dict
 
 # 初始化数据库
 init_db()

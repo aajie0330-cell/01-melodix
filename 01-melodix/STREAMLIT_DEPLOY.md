@@ -127,6 +127,27 @@ Streamlit Cloud 免费版：
 
 ## 🐛 常见问题
 
+### Q: 部署失败，显示 "installer returned a non-zero exit code"
+
+**A**: 这通常是依赖安装问题。解决方法：
+
+1. **检查 requirements_streamlit.txt**
+   - 确保文件在根目录
+   - 确保没有拼写错误
+   - 使用 `>=` 而不是 `==` 固定版本
+
+2. **在 Streamlit Cloud 设置中**
+   - Python version 选择 `3.11` 或 `3.10`
+   - Requirements file 填写: `requirements_streamlit.txt`
+
+3. **重试部署**
+   - 在 Streamlit Cloud 点击 **"Reboot app"**
+   - 或推送新的 commit 触发重新部署
+
+4. **查看完整日志**
+   - 点击 **"Manage app"** → **"Logs"**
+   - 找到具体的错误信息
+
 ### Q: 部署失败怎么办？
 
 **A**: 检查日志（Logs）中的错误信息：

@@ -1,0 +1,14 @@
+music-server/
+├── app/
+│   ├── main.py          # FastAPI app
+│   ├── downloader.py    # yt-dlp logic
+│   ├── database.py      # SQLite / song metadata
+│   └── routes/
+│       ├── songs.py     # GET /songs, POST /add, DELETE /song
+│       └── stream.py    # GET /play/:id  (audio streaming)
+├── music/               # mp3 files 存这里
+├── frontend/
+│   ├── index.html       # 主页面（歌曲列表 + 播放器）
+│   ├── app.js
+│   └── manifest.json    # PWA
+└── requirements.txt

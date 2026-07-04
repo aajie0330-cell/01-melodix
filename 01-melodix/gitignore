@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+melodix.db
+music/
+*.mp3
+.DS_Store

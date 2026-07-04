@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../song"
+		},
+		{
+			"path": "../streaming"
+		}
+	],
+	"settings": {}
+}
